@@ -28,7 +28,9 @@ int main(void) {
 }
 
 int reverseNumber(int & n) {
-	int remainder, revNum = 0;
+	int remainder, revNum;
+
+	remainder = revNum = 0; // Initializing both values in a chain
 
 	while (n != 0) {
 		remainder = n % 10;

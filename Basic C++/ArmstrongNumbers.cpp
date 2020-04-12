@@ -10,6 +10,7 @@ int main(void) {
 
 	number = digit;
 
+	// Using the algorithm of reversing a number but a little bit different
 	while (number != 0) {
 		remainder = number % 10;
 		sum += remainder * remainder * remainder;
