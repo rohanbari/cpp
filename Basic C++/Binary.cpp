@@ -1,17 +1,26 @@
 #include <iostream>
-#include <bitset>
+#include <cstring>
 
 using namespace std;
+const int N = 65;
 
-int main(void) {
-	string input;
+int main(void)
+{
+	char input[N];
+	int in = 0;
 
-	cout << "Enter a random sentence: ";
-	getline(cin, input);
+	cout << "Input a string: ";
+	cin.get(input, N);
 
-	for (size_t i = 0; i < input.size(); i++) {
-		cout << bitset<8>(input[i]) << " ";
+	for (int i = 0; i < strlen(input); i++)
+	{
+		if (in != 0)
+			in += int(input[i]) % 2;
+
+		cout << in;
 	}
+
+	cout << endl;
 
 	return 0;
 }
