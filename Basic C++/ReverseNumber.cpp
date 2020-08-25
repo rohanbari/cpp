@@ -11,7 +11,7 @@ loop:
 	cout << "Enter a number to be reversed: ";
 	cin >> number;
 
-	if (!number != 0) {
+	if (number == 0) {
 		cout << "The number is zero. Please input a nonzero number." << endl << endl;
 		goto loop;
 	}

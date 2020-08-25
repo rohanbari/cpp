@@ -17,7 +17,7 @@ loop:
 	float array[element];
 
 	for (int i = 0; i < element; i++) {
-		cout << "Input value for " << (i + 1) << " array: ";
+		cout << "Input value for " << (i + 1) << " box: ";
 		cin >> array[i];
 	}
 

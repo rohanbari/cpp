@@ -9,7 +9,7 @@ int main(void) {
 	cin >> x1 >> x2;
 
 	if (x1 == x2) {
-		cout << "LCM is = " << x1;
+		cout << "LCM is = 1";
 		exit(0);
 	}
 

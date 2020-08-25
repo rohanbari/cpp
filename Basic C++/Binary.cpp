@@ -1,26 +1,22 @@
 #include <iostream>
-#include <cstring>
 
-using namespace std;
-const int N = 65;
+const int MAX = 100;
 
 int main(void)
 {
-	char input[N];
-	int in = 0;
+	char string[MAX];
+	int n;
 
-	cout << "Input a string: ";
-	cin.get(input, N);
+	std::cout << "Enter a string: ";
+	std::cin >> string;
 
-	for (int i = 0; i < strlen(input); i++)
+	for (int i = 0; string[i] != '\0'; i++)
 	{
-		if (in != 0)
-			in += int(input[i]) % 2;
-
-		cout << in;
+		n = int(string[i]);
+		while (n != 0)
+		{
+			n /= 2;
+			n %= 2;
+		}
 	}
-
-	cout << endl;
-
-	return 0;
 }

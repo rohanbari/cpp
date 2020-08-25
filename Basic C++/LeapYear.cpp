@@ -1,18 +1,20 @@
 #include <iostream>
 
-using namespace std;
-
 int main(void) {
 	int year;
 
-	cout << "Enter the year you want to check: ";
-	cin >> year;
+	std::cout << "Enter a year: ";
+	std::cin >> year;
 
-	if (year % 4 >= 1) {
-		cout << "The year " << year << " was not a leap year." << endl;
-	} else {
-		cout << "The year " << year << " was a leap year." << endl;
+	if (year <= 0) {
+		std::cout << "Year number must be a positive integer." << std::endl;
+		return -1;
 	}
+
+	if (year % 400 == 0 || year % 4 == 0 && !(year % 100 == 0))
+		std::cout << "The year " << year << " was a leap year." << std::endl;
+	else
+		std::cout << "Not a leap year!" << std::endl;
 
 	return 0;
 }
